@@ -5,9 +5,9 @@ const app = express()
 // setting template engine
 app.set('view engine', 'pug')
 
-// getting the request
+// localhost:8000
 app.get('/', (req, res) => {
-    res.send('Hello')
+    res.render('index')
     });
     
 // listening  for requests
