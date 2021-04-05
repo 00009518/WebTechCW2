@@ -5,6 +5,10 @@ const app = express()
 // setting template engine
 app.set('view engine', 'pug')
 
+// serving static files
+app.use(express.static('public'))
+
+
 // localhost:8000
 app.get('/', (req, res) => {
     res.render('index')
