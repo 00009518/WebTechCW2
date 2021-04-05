@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        title To Do 
+    body 
+        nav(class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav")
+            div(class="container")
+                a(class="navbar-brand js-scroll-trigger" href="#page-top") To do application
+                button(data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation")
+                    i(class="fa fa-bars")
+                div(class="collapse navbar-collapse" id="navbarResponsive")
+                    ul(class="navbar-nav ml-auto")
+                        li(class="nav-item mx-0 mx-lg-1")
+                            a(class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#create_task") ADD TASK 
+                            a(class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#all_tasks") ALL TASKS
+                            a(class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#completed_tasks") COMPLETED TASKS 
+        block content 
+        footer.text-center.footer
+            .container
+                p
+                    br
+                        strong
+                            | THIS WEB APPLICATION WAS CREATED TO FULFILL WEB TECHNOLOGY MODULE&apos;S REQUIREMENTS AND DOES NOT REPRESENT AN ACTUAL COMPANY OR SERVICE.
+        .text-center.text-white.copyright.py-4
+            .container
+                small Copyright &copy;&nbsp;Wiut_student 2021
