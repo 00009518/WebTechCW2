@@ -26,6 +26,12 @@ app.get('/all_tasks', (req, res) => {
     res.render('all_tasks', { tasks: tasks })
 });
 
+
+// detail page
+app.get('/all_tasks/details', (req, res) => {
+    res.render('details', { tasks: tasks })
+});
+
 // listening  for requests
 app.listen(8000, err => {
     if (err) console.log(err)
