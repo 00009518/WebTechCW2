@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block content 
+    .text-center.text-white.bg-primary.masthead
+        p.text-center(style='font-size: 35px;color: var(--gray-dark);border-radius: 10px;') Title
+        textarea.form-control-lg.flex-fill(placeholder='Type your task name...' rows='10' style='font-size: 20px;width: 50%;height: 100px;margin: auto;border-radius: 20px;')
+        p.text-center(style='color: var(--secondary);font-size: 30px;') Description
+        textarea.form-control-lg.flex-fill(placeholder='Type your task name...' rows='10' style='font-size: 20px;width: 50%;height: 100px;margin: auto;border-radius: 20px;')
+        textarea.form-control-lg.flex-fill(placeholder='Type your task here...' rows='10' style='font-size: 20px;width: 60%;margin: auto;height: 200px;text-align: left;margin-right: 28%;margin-left: 20%;border-radius: 20px;box-shadow: 0px 0px;')
+        button.btn.btn-success(type='button' style='height: 10%;margin: 40px;font-size: 20px;') Save

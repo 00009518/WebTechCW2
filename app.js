@@ -13,6 +13,11 @@ app.use(express.static('public'))
 app.get('/', (req, res) => {
     res.render('index')
     });
+
+// create page
+app.get('/create_task', (req, res) => {
+    res.render('create_task')
+    });
     
 // listening  for requests
 app.listen(8000, err => {
