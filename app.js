@@ -51,6 +51,17 @@ app.post('/create_task', (req, res) => {
     }
 })
 
+// define basic REST API
+app.get('/api/v1/tasks', (req, res) => {
+    fs.readFile('./data/tasks.json', (err, data) => {
+        if (err) throw err
+
+        const tasks = JSON.parse(data)
+
+        res.json(tasks)
+    })
+})
+
 
 
 // all tasks page
