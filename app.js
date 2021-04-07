@@ -54,10 +54,18 @@ app.post('/create_task', (req, res) => {
 })
 
 
-const tasks = ['fewfgreger', 'eqERWfseawFWAfr']
-    // all tasks page
+
+// all tasks page
 app.get('/all_tasks', (req, res) => {
-    res.render('all_tasks', { tasks: tasks })
+
+
+    fs.readFile('./data/tasks.json', (err, data) => {
+        if (err) throw err
+
+        const tasks = JSON.parse(data)
+
+        res.render('all_tasks', { tasks: tasks })
+    })
 })
 
 

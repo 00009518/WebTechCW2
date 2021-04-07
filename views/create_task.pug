@@ -8,7 +8,7 @@ block content
         input.form-control-lg.flex-fill(type="text" name="title" placeholder='Type your task name...' rows='10' style='font-size: 20px;width: 50%;height: 100px;margin: auto;border-radius: 20px;')
         textarea.form-control-lg.flex-fill(type="text" name="description" placeholder='Type your task here...' rows='10' style='font-size: 20px;width: 60%;margin: auto;height: 200px;text-align: left;margin-right: 28%;margin-left: 20%;border-radius: 20px;box-shadow: 0px 0px;')
         button.btn.btn-success(type='submit' style='height: 10%;margin: 40px;font-size: 20px;') Save
-    if error
-        p.error(style="display: inline-block; padding: 10px; border: 1px solid red; font-size: 1.2rem; color: red; margin-right: 35%;margin-left: 30%;") Please fill the box before saving.
-    if success 
-        p.success(style="display: inline-block; padding: 10px; border: 1px solid green; font-size: 1.2rem; color: green; margin-right: 35%; margin-left: 30%;") Task is added!
+        if error
+            p.error(style="display: inline-block; padding: 10px; border: 1px solid red; font-size: 1.2rem; color: red;") Please fill the box before saving.
+        if success 
+            p.success(style="display: inline-block; padding: 10px; border: 1px solid green; font-size: 1.2rem; color: green;") Task is added!
