@@ -7,8 +7,8 @@ block content
         div(class="divcontainer")
             each task in tasks
                 div(class="task-wrapper" style="max-width: 60%; display: flex; justify-content: space-between; padding: 10px; color: black; background-color: white; margin: 0 auto; border-radius: 20px; border-bottom: 1px solid black; align-items: center;") 
-                    a.task(href="/all_tasks/${tasks.id}") #{task.title}
+                    a.task(href=`/all_tasks/${task.id}`) #{task.title}
                     .box-btns(style="display: inline-block; justify-content: space-between;")
-                        a.read(href="/all_tasks/${tasks.id}" style="display: inline-block; padding: 7px; background: blue; color: #fff; border-radius: 10px;") Read
+                        a.read(href=`/all_tasks/${task.id}` style="display: inline-block; padding: 7px; background: blue; color: #fff; border-radius: 10px;") Read
                         a.done(href="#" style="display: inline-block; padding: 7px; background: green; color: #fff; border-radius: 10px;") Done
                         a.delete(href="#" style="display: inline-block; padding: 7px; background: red; color: #fff; border-radius: 10px;") Delete

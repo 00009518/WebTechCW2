@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 
+
 // setting template engine
 app.set('view engine', 'pug')
 
@@ -48,9 +49,6 @@ app.post('/create_task', (req, res) => {
             })
         })
     }
-
-
-
 })
 
 
@@ -70,14 +68,23 @@ app.get('/all_tasks', (req, res) => {
 
 
 // detail page
-app.get('/all_tasks/details', (req, res) => {
-    res.render('details', { tasks: tasks })
+app.get('/all_tasks/:id', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./data/tasks.json', (err, data) => {
+        if (err) throw err
+
+        const tasks = JSON.parse(data)
+
+        const task = tasks.filter(task => task.id == id)[0]
+        res.render('details', { task: task })
+    })
 })
 
 // listening  for requests
 app.listen(8000, err => {
     if (err) console.log(err)
-    console.log('App is listeningonport  http://localhost:8000')
+    console.log('App is listening on port  http://localhost:8000')
 })
 
 
