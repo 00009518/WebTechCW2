@@ -88,6 +88,24 @@ app.listen(8000, err => {
 })
 
 
+// delete function
+app.get('/:id/delete', (req, res) => {
+    const id = req.params.id
+    fs.readFile('./data/tasks.json', (err, data) => {
+        if (err) throw err
+
+        const tasks = JSON.parse(data)
+
+        const filteredTasks = tasks.filter(task => task.id != id)
+
+        fs.writeFile('./data/tasks.json', JSON.stringify(filteredTasks), (err) => {
+            if (err) throw err
+
+            res.render('all_tasks', { tasks: filteredTasks, deleted: true })
+        })
+    })
+})
+
 function id() {
     return '_' + Math.random().toString(36).substr(2, 9);
 }

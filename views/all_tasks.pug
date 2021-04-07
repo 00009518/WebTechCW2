@@ -10,5 +10,5 @@ block content
                     a.task(href=`/all_tasks/${task.id}`) #{task.title}
                     .box-btns(style="display: inline-block; justify-content: space-between;")
                         a.read(href=`/all_tasks/${task.id}` style="display: inline-block; padding: 7px; background: blue; color: #fff; border-radius: 10px;") Read
-                        a.done(href="#" style="display: inline-block; padding: 7px; background: green; color: #fff; border-radius: 10px;") Done
-                        a.delete(href="#" style="display: inline-block; padding: 7px; background: red; color: #fff; border-radius: 10px;") Delete
+                        a.delete(href=`/${task.id}/delete` style="display: inline-block; padding: 7px; background: red; color: #fff; border-radius: 10px;") Delete
+                       
